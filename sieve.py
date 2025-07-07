@@ -2,21 +2,17 @@ import math
 
 def calculate_binary_sum(number_to_process: int) -> list:
     """
-    Iterates over a binary number from right to left and calculates cumulative
-    sums of modulo operations.
+    Finds the divisors of a number
 
-    For each '1' in the binary string (from right to left), the function
-    calculates the corresponding power of 2 (1, 2, 4, 8...). It then takes
-    this power of 2 and performs a modulo operation with each number
-    in a predefined list. The result of each modulo operation is added to a
-    running total for that number.
+    It does this by initialising number_to_check to 2 and 3 and subsequently appends higher numbers to check
+    The algo checks if the sum of any combination of digits evaluated for that number in that base
 
     Args:
-        binary_string: A string representing a binary number.
+        number_to_process: the integer to process
 
     Returns:
-        A dictionary where keys are numbers from the list and values are the
-        cumulative sums of the modulo operations.
+        A list of divisors 
+
     """
 
     numbers_to_check = set()
